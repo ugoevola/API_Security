@@ -1,14 +1,15 @@
 package test;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class IndexController {
 	
-	// FOR GET REQUEST
-	@RequestMapping("/index")
-	public String sayHi() {
-		return "Hello";
+	@GetMapping(value="/") // URL
+	public String index() {
+		return "index"; // name of jsp page
 	}
 }
