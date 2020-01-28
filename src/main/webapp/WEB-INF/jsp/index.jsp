@@ -9,6 +9,8 @@
 	
 	<body>
 		<h1>VET API SECURITY</h1>
+		<p> ${name} </p>
 		<img src="/images/orange.png" height="50" width="50">
+		<a href="/login">Connect</a>
 	</body>
 </html>
