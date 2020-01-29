@@ -27,29 +27,5 @@ public class SecurityApiApplication {
 			model.addAttribute("isConnected", true);
 		return "Home";
 	}
-	
-	@RequestMapping("/info")
-    public String info(Principal principal, Model model) {
-		if (principal == null)
-			model.addAttribute("isConnected", false);
-		else
-			model.addAttribute("isConnected", true);
-		//SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		OAuth2AuthenticationToken p = (OAuth2AuthenticationToken)principal;
-		Map<String, Object> a = p.getPrincipal().getAttributes();
-		Set<String> l = a.keySet();
-		for (Object m: l) {
-			System.out.println(m);
-			System.out.println(a.get(m));
-		}
-		
-		model.addAttribute("given_name", a.get("given_name"));
-		model.addAttribute("family_name", a.get("family_name"));
-		model.addAttribute("locale", a.get("locale"));
-		model.addAttribute("picture", a.get("picture"));
-		model.addAttribute("email", a.get("email"));
-
-		return "Info";
-    }
 
 }
