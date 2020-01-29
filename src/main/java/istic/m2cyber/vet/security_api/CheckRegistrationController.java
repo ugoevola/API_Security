@@ -14,19 +14,16 @@ public class CheckRegistrationController {
 
 	@RequestMapping("/check")
 	public RedirectView checkIfUserIsRegistratedInDataBase(Principal principal) {
-		OAuth2AuthenticationToken p = (OAuth2AuthenticationToken)principal;
-		Map<String, Object> a = p.getPrincipal().getAttributes();
-		Set<String> l = a.keySet();
-		for (Object m: l) {
-			System.out.println(m);
-			System.out.println(a.get(m));
-		}
+		OAuth2AuthenticationToken authToken = (OAuth2AuthenticationToken)principal;
+		Map<String, Object> details = authToken.getPrincipal().getAttributes();
 		
-		/*model.addAttribute("given_name", a.get("given_name"));
-		model.addAttribute("family_name", a.get("family_name"));
-		model.addAttribute("locale", a.get("locale"));
-		model.addAttribute("picture", a.get("picture"));
-		model.addAttribute("email", a.get("email"));*/
+		String user_id = (String) details.get("sub");
+		String given_name = (String) details.get("given_name");
+		String family_name = (String) details.get("family_name");
+		String locale = (String) details.get("locale");
+		String picture = (String) details.get("picture");
+		String email = (String) details.get("email");
+		
 		RedirectView redirectView = new RedirectView();
 	    redirectView.setUrl("/");
 	    return redirectView;
