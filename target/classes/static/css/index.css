@@ -1,3 +1,22 @@
 h1{
-	color: red;
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+h3{
+	text-align: center;
+}
+ul{
+	text-align: center;
+}
+p{
+	text-align: center;
+}
+img{
+	position: absolute;
+  	margin-left: auto;
+  	width: 50%;
+  	height: 50%;
+ 	margin-right: auto;
 }

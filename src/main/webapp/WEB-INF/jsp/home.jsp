@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>API Security - Log</title>
+<title>API Security - Home</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/css/index/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 
 			<div class="container-fluid">
 				<div class="text-center">
-					<h1 class="mt-4">Log</h1>
+					<h1 class="mt-4">Home</h1>
 					<p>This is the home page of our project, it is the only page
 						accessible for the moment until you log in the website.</p>
 				</div>
