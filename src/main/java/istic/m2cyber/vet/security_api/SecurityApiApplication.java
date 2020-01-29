@@ -19,7 +19,7 @@ public class SecurityApiApplication {
 		SpringApplication.run(SecurityApiApplication.class, args);
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping({"/", "/home"})
 	public String home(Principal principal, Model model) {
 		if (principal == null)
 			model.addAttribute("isConnected", false);
@@ -27,5 +27,27 @@ public class SecurityApiApplication {
 			model.addAttribute("isConnected", true);
 		return "Home";
 	}
+	
+	@RequestMapping("/index")
+	public String index(Principal principal, Model model) {
+		if (principal == null)
+			model.addAttribute("isConnected", false);
+		else
+			model.addAttribute("isConnected", true);
+		return "Index";
+	}
+	
+	@RequestMapping("/log")
+	public String log(Principal principal, Model model) {
+		if (principal == null)
+			model.addAttribute("isConnected", false);
+		else
+			model.addAttribute("isConnected", true);
+		return "Log";
+	}
+	
+	
+	
+	
 
 }

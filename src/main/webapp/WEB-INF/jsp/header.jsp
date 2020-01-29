@@ -5,7 +5,7 @@
 <head>
 
 <!-- Access the bootstrap Css like this,
-        Spring boot will handle the resource mapping automcatically -->
+        Spring boot wiInformationsll handle the resource mapping automcatically -->
 <link rel="stylesheet" type="text/css"
 	href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -21,7 +21,7 @@
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<ul class="navbar-nav">
-			<li class="nav-item active"><a class="nav-link" href="#">App
+			<li class="nav-item active"><a class="nav-link" href="/">App
 					Security API</a></li>
 			<c:choose>
 				<c:when test="${!isConnected}">
@@ -34,7 +34,13 @@
 				</c:otherwise>
 			</c:choose>
 			
-			<li class="nav-item"><a class="nav-link" href="info">Informations</a></li>
+			<li class="nav-item"><a class="nav-link" href="index">Index</a></li>
+			
+			<li class="nav-item"><a class="nav-link" href="/">Resource 1</a></li>
+			
+			<li class="nav-item"><a class="nav-link" href="/">Resource 2</a></li>
+			
+			<li class="nav-item"><a class="nav-link" href="log">Log</a></li>
 
 		</ul>
 	</nav>
